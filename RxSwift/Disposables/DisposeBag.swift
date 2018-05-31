@@ -46,6 +46,10 @@ public final class DisposeBag: DisposeBase {
     public func insert(_ disposable: Disposable) {
         _insert(disposable)?.dispose()
     }
+
+    public func foo(arg1: Bool, arg2: Bool, arg3: Bool, arg4: Bool, arg5: Bool) -> Bool {
+        return true
+    }
     
     private func _insert(_ disposable: Disposable) -> Disposable? {
         _lock.lock(); defer { _lock.unlock() }
